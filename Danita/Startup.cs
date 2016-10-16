@@ -14,12 +14,17 @@ namespace Danita
 			config.Routes.MapHttpRoute (
 			name: "Api",
 				routeTemplate: "api/{controller}/{id}",
-				defaults: new { id = RouteParameter.Optional}
+				defaults: new { 
+					id = RouteParameter.Optional
+				}
 			);
 
+			app.UseWelcomePage (new Microsoft.Owin.Diagnostics.WelcomePageOptions(){
+				Path = new Microsoft.Owin.PathString("/home")
+			});
 			app.UseWebApi (config);
-			app.UseCors(CorsOptions.AllowAll);
-			app.MapSignalR();
+			app.UseCors (CorsOptions.AllowAll);
+			app.MapSignalR ();
 		}
 	}
 }
