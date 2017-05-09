@@ -9,7 +9,8 @@ namespace Danita
 		// Get api/pets
 		public IEnumerable<string> Get ()
 		{
-			return new string[] { "Colitas", "Tomboy"};
+            int version = 5;
+			return new string[] { $"Colitas{version}", "Tomboy"};
 		}
 
 		// Get api/pets/{id}
