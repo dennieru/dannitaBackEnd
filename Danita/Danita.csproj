@@ -76,6 +76,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adapters\MainAdapter.cs" />
+    <Compile Include="Models\Entity.cs" />
+    <Compile Include="Models\Owner.cs" />
+    <Compile Include="Models\Pet.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
